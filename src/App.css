@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+.inner {
+  width: 1200px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ {
+  /* header 부분 */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 50px;
+}
+.App-header h1 {
+  display: inline-block;
+  line-height: 50px;
+}
+.App-header p {
+  float: right;
+  line-height: 50px;
+}
+
+ {
+  /* To do list 입력 부분 */
+}
+.card-add {
+  height: 150px;
+  background-color: #525b76;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+  align-items: center;
+}
+.card-add label {
+  color: white;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+}
+.card-add label:nth-child(2) {
+  margin-left: 30px;
+}
+.card-add input {
+  height: 26px;
+  margin-left: 10px;
+  padding-left: 5px;
+}
+.card-add label:nth-child(1) input {
+  width: 245px;
+}
+.card-add label:nth-child(2) input {
+  width: 495px;
+}
+
+.card-add button {
+  width: 100px;
+  height: 30px;
+  margin-left: 30px;
+  background-color: #e7e9ef;
+}
+.card-add button:hover {
+  background-color: #434b60;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+ {
+  /* To do list 카드 부분 */
+}
+.cards {
+  margin: 50px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ {
+  /* workig 카드 부분 */
+}
+.working {
+  margin-bottom: 70px;
+}
+.working h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #525b76;
+}
+
+ {
+  /* Done 카드 부분 */
+}
+.done {
+  margin-bottom: 70px;
+}
+.done h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #525b76;
+}
+
+ {
+  /* 더미 카드 부분 */
+}
+.wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.todo-card {
+  width: 316px;
+  height: 140px;
+  border: 3px solid #525b76;
+  padding: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.todo-card h3 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.card-button {
+  display: inline-block;
+  text-align: center;
+}
+.card-button button {
+  width: 150px;
+  height: 30px;
+  font-size: 16px;
+}
+.card-button button:nth-child(2) {
+  margin-left: 15px;
+}
+.card-button button:hover {
+  background-color: #434b60;
+  color: white;
 }
