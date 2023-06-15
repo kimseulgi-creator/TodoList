@@ -2,7 +2,7 @@ import React from 'react';
 
 function Layout(props) {
   return (
-    <div className="App">
+    <div className="container">
       <div className="inner">
         {/* header 부분 */}
         <header className="App-header">

@@ -3,6 +3,7 @@ import React from 'react';
 function Form({ title, setTitle, todo, setTodo, addTodoHandler }) {
   return (
     <form className="card-add">
+      {/* Title 입력부분 */}
       <label>
         TITLE
         <input
@@ -13,6 +14,8 @@ function Form({ title, setTitle, todo, setTodo, addTodoHandler }) {
           }}
         />
       </label>
+
+      {/* Todo 입력부분 */}
       <label>
         TO DO
         <input

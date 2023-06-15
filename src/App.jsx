@@ -10,6 +10,7 @@ const App = () => {
   const [title, setTitle] = useState('');
   const [todo, setTodo] = useState('');
 
+  // 카드 add 부분
   const addTodoHandler = () => {
     const newTodo = {
       id: todoList.length + 1,
@@ -18,6 +19,17 @@ const App = () => {
       isDone: false,
       btnName: 'Complete🎉',
     };
+
+    // 유효성 검사
+    if (title === '') {
+      alert('제목을 입력하세요.');
+      return false;
+    }
+    if (todo === '') {
+      alert('To do 내용을 입력하세요.');
+      return false;
+    }
+
     setTodoList([...todoList, newTodo]);
     setTitle('');
     setTodo('');
@@ -36,7 +48,7 @@ const App = () => {
         list.id === id ? { ...list, isDone: !list.isDone } : list
       )
       .map((list) =>
-        list.isDone == true
+        list.isDone === true
           ? { ...list, btnName: 'Unfinished' }
           : { ...list, btnName: 'Complete🎉' }
       );

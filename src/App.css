@@ -95,17 +95,16 @@
   /* 더미 카드 부분 */
 }
 .wrap {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .todo-card {
   width: 316px;
   height: 140px;
   border: 3px solid #525b76;
   padding: 30px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
