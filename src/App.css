@@ -3,9 +3,8 @@
   margin: 0 auto;
 }
 
- {
-  /* header 부분 */
-}
+/* header 부분 */
+
 .App-header {
   height: 50px;
 }
@@ -18,9 +17,8 @@
   line-height: 50px;
 }
 
- {
-  /* To do list 입력 부분 */
-}
+/* To do list 입력 부분 */
+
 .card-add {
   height: 150px;
   background-color: #525b76;
@@ -60,18 +58,18 @@
   background-color: #434b60;
   color: white;
 }
- {
-  /* To do list 카드 부분 */
-}
+
+/* To do list 카드 부분 */
+
 .cards {
-  margin: 50px 0;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
 
- {
-  /* workig 카드 부분 */
-}
+/* workig 카드 부분 */
+
 .working {
-  margin-bottom: 70px;
+  margin-bottom: 100px;
 }
 .working h2 {
   font-size: 28px;
@@ -79,9 +77,12 @@
   color: #525b76;
 }
 
- {
-  /* Done 카드 부분 */
+hr {
+  margin-bottom: 30px;
 }
+
+/* Done 카드 부분 */
+
 .done {
   margin-bottom: 70px;
 }
@@ -91,9 +92,8 @@
   color: #525b76;
 }
 
- {
-  /* 더미 카드 부분 */
-}
+/* 카드 부분 */
+
 .wrap {
   display: grid;
   gap: 30px;
@@ -104,7 +104,6 @@
   height: 140px;
   border: 3px solid #525b76;
   padding: 30px;
-  /* margin-bottom: 30px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -112,6 +111,23 @@
 .todo-card h3 {
   font-size: 28px;
   font-weight: bold;
+}
+.todo-card p {
+  height: 50px;
+  width: 316px;
+  overflow-y: auto;
+  line-height: 25px;
+}
+
+.todo-card p::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+.todo-card p::-webkit-scrollbar-thumb {
+  background-color: #525b76;
+}
+.todo-card p::-webkit-scrollbar-track {
+  background-color: #e7e9ee;
 }
 
 .card-button {
@@ -126,7 +142,11 @@
 .card-button button:nth-child(2) {
   margin-left: 15px;
 }
-.card-button button:hover {
+.card-button button:nth-child(1):hover {
   background-color: #434b60;
+  color: white;
+}
+.card-button button:nth-child(2):hover {
+  background-color: #cf5d64;
   color: white;
 }

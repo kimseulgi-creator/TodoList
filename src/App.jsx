@@ -13,7 +13,7 @@ const App = () => {
   // 카드 add 부분
   const addTodoHandler = () => {
     const newTodo = {
-      id: todoList.length + 1,
+      id: new Date(),
       title,
       todo,
       isDone: false,
@@ -37,8 +37,13 @@ const App = () => {
 
   // 카드 삭제
   const deleteTodoHandler = (id) => {
-    const newTodoList = todoList.filter((todo) => todo.id !== id);
-    setTodoList(newTodoList);
+    const confirmDelete = window.confirm('해당 To do를 삭제하시겠습니까?');
+    if (confirmDelete) {
+      const newTodoList = todoList.filter((todo) => todo.id !== id);
+      setTodoList(newTodoList);
+    } else {
+      return false;
+    }
   };
 
   // Working -> Done, Done -> Working
@@ -53,7 +58,6 @@ const App = () => {
           : { ...list, btnName: 'Complete🎉' }
       );
 
-    console.log(newDoneList);
     setTodoList(newDoneList);
   };
 

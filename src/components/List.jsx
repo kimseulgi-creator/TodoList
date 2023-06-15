@@ -7,6 +7,7 @@ function List({ todoList, deleteTodoHandler, completeHandler }) {
       {/* workig 카드 부분 */}
       <div className="working">
         <h2>Working</h2>
+        <hr />
         <div className="wrap">
           {todoList
             .filter((trueList) => trueList.isDone === false)
@@ -28,6 +29,7 @@ function List({ todoList, deleteTodoHandler, completeHandler }) {
       {/* Done 카드 부분 */}
       <div className="done">
         <h2>Done</h2>
+        <hr />
         <div className="wrap">
           {todoList
             .filter((trueList) => trueList.isDone === true)
