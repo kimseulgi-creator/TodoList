@@ -2,7 +2,8 @@ import './reset.css';
 import './App.css';
 import { useState } from 'react';
 import Layout from './components/Layout';
-import TodoCard from './components/TodoCard';
+import List from './components/List';
+import Form from './components/Form';
 
 const App = () => {
   const [todoList, setTodoList] = useState([]);
@@ -35,7 +36,9 @@ const App = () => {
         list.id === id ? { ...list, isDone: !list.isDone } : list
       )
       .map((list) =>
-        list.isDone == true ? { ...list, btnName: 'Unfinished' } : list
+        list.isDone == true
+          ? { ...list, btnName: 'Unfinished' }
+          : { ...list, btnName: 'Complete🎉' }
       );
 
     console.log(newDoneList);
@@ -45,73 +48,20 @@ const App = () => {
   return (
     <Layout>
       {/* To do list 입력 부분 */}
-
-      <div className="card-add">
-        <label>
-          TITLE
-          <input
-            value={title}
-            onChange={(event) => {
-              setTitle(event.target.value);
-            }}
-          />
-        </label>
-        <label>
-          TO DO
-          <input
-            value={todo}
-            onChange={(event) => {
-              setTodo(event.target.value);
-            }}
-          />
-        </label>
-        <button onClick={addTodoHandler}>Add</button>
-      </div>
+      <Form
+        title={title}
+        setTitle={setTitle}
+        todo={todo}
+        setTodo={setTodo}
+        addTodoHandler={addTodoHandler}
+      />
 
       {/* To do list 카드 부분 */}
-      <section className="cards">
-        {/* workig 카드 부분 */}
-        <div className="working">
-          <h2>Working</h2>
-          <div className="wrap">
-            {todoList
-              .filter((trueList) => trueList.isDone === false)
-              .map((todo) => {
-                return (
-                  <TodoCard
-                    key={todo.id}
-                    title={todo.title}
-                    todo_contents={todo}
-                    handleDelete={deleteTodoHandler}
-                    Complete={completeHandler}
-                    changeBtn={todo.btnName}
-                  />
-                );
-              })}
-          </div>
-        </div>
-
-        {/* Done 카드 부분 */}
-        <div className="done">
-          <h2>Done</h2>
-          <div className="wrap">
-            {todoList
-              .filter((trueList) => trueList.isDone === true)
-              .map((todo) => {
-                return (
-                  <TodoCard
-                    key={todo.id}
-                    title={todo.title}
-                    todo_contents={todo}
-                    handleDelete={deleteTodoHandler}
-                    Complete={completeHandler}
-                    changeBtn={todo.btnName}
-                  />
-                );
-              })}
-          </div>
-        </div>
-      </section>
+      <List
+        todoList={todoList}
+        deleteTodoHandler={deleteTodoHandler}
+        completeHandler={completeHandler}
+      />
     </Layout>
   );
 };
