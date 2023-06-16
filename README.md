@@ -30,4 +30,6 @@
 <br>
   
 4. 프로젝트 시연 영상<br>
-	
+<br>
+
+![vllo1](https://github.com/kimseulgi-creator/TodoList/assets/78592995/20d7e459-51da-4863-bbea-0c13eee38a1b)	
