@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+<h1>Todo List</h1><br>
+내일배움캠프 6기 5조 개인과제 23.06.14 - 23.06.16<br>
+<br>
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. 과제 소개<br>
+해야할 일을 기록하고 해당 일을 완료하면 'complete' 버튼을 클릭해 완료, 필요없는 To do는 지워가며 자신의 할일을 체크할 수 있는 Todo List입니다.
+'complete' 버튼을 클릭한 To do들은 'Done' 공간으로 넘어가기 때문에 완료한  To do 들을 확인할 수 있습니다.
+<br>
 
-## Available Scripts
+2. 구현 기능
+- UI 구현하기
+- Todo 추가 하기
+- Todo 삭제 하기
+- Todo 완료 상태 변경하기 (완료 ↔ 진행중)
+<br>
 
-In the project directory, you can run:
+3. 컴포넌트 소개
+- Layout<br>
+  header와 최대 넓이 1200px 지정해주는 inner class가 묶여 있는 컴포넌트입니다.
 
-### `yarn start`
+- Form<br>
+  'Title'과 'To do'를 입력 받는 컴포넌트입니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- List<br>
+  'Working" 부분과 'Done' 부분을 구분지어주는 컴포넌트입니다.
+  
+- TodoCard<br>
+  'Title'과 내용이 담겨져있는 카드 내용 부분의 컴포넌트입니다.
+<br>
+  
+4. 프로젝트 시연 영상<br>
+<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![vllo1](https://github.com/kimseulgi-creator/TodoList/assets/78592995/20d7e459-51da-4863-bbea-0c13eee38a1b)	
